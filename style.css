@@ -1,0 +1,69 @@
+/* CSS Document */
+  body {
+    padding: 10px;
+    background: rgb(212, 207, 207);
+  }
+  
+  div {
+    border: 2px solid lightslategray;
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  #titleBox {
+    height: 100px;
+    background-color: white;
+  }
+  
+  #title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 20px;
+    margin-bottom: -10px;
+  }
+
+  #infotitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  #calculator {
+      width: 10%;
+      height: 100%;
+      float: right;
+  }
+
+  #main {
+    border: 2px solid lightslategray;
+    background-color: white;
+    height: 800px
+  }
+
+  #linerCalculator {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  #form {
+    border: 1px solid black;
+    width: 350px;
+    height: 300px;
+    background-color: rgb(243, 242, 248);
+    border: 2px solid lightslategray;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
