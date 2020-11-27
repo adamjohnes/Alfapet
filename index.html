@@ -13,16 +13,19 @@
     <body>
         <header>
             <div id = "titleBox" class = "container">
-                <!-- problem is here (I think)-->
                     <h1 id = "title">Cat Pan Liner Size Calculator</h1>
                     <p id = "infotitle">Online Calculator</p>
-                    <img src =  "calculator.jpg" alt = "calculator" id = "calculator">
             </div>
         </header>
         <section>
+            <div id = "description" class = "container">
+                <h1 id = "aboutTitle">About This Calculator</h1>
+                <img src =  "calculator.jpg" alt = "calculator" id = "calculator">
+                    <p id = "about">This calculator takes the dimensions of your litterbox and matches the size of your litterbox with the appropriate Alfapet sized liner. To do this, you must enter your litterbox's height, length and width in inches. Please use the pictures below for any questions you may have about properly measuring your litterbox.</p>
+            </div>
             <div id = "main" class = "container">
-                <h1 id = "linerCalculator">Cat Pan Liner Calculator</h1>
-                <form id = "form" class = "w3-form w3-margin">
+                <form id = "form" class = "form">
+                    <h1 id = "linerCalculator">Cat Pan Liner Calculator</h1>
                     <label id = "labelWidth" for = "width">Width(in):</label><br>
                     <input type = "text" id = "width" placeholder = "Enter width in INCHES"><br><br>
                     <label id = "labelLength" for = "length">Length(in):</label><br>
@@ -30,9 +33,36 @@
                     <label id = "labelDepth" for = "Depth">Depth(in):</label><br>
                     <input type = "text" id = "depth" placeholder = "Enter depth in INCHES"><br><br>
                     <input type = "submit" id = "submit" value = "Submit">
-                    <input type = "reset" id = "reset">
+                    <input type = "reset" id = "reset" value = "Reset">
                 </form>
+                <img src = "pineapple.jpg" alt = "pineapple" id = "pineapple">
+                    <p id = "L1info">To measure the dimensions of your litterbox, you must take the values of the length, width and height. </p>
+                <img src = "aruba.jpg" alt = "aruba" id = "aruba">
+                    <p id = "L2info">In cases where your litterbox may not have equal heights on all sides, measure the side with the longest height, and use that measurement as your height value.</p>
+                <h1 id = "sizes">Alfapet Liner Sizes</h1>
+                <table id = "table">
+                    <tr>
+                      <th>Size Names</th>
+                      <th>Dimensions</th>
+                    </tr>
+                    <tr>
+                      <td>ReqMed</td>
+                      <td>31x17</td>
+                    </tr>
+                    <tr>
+                      <td>XLJumbo</td>
+                      <td>37x18</td>
+                    </tr>
+                    <tr>
+                        <td>Super Jumbo</td>
+                        <td>40x22</td>
+                    </tr>
+                  </table>
+                  <a id = "returnLink" href="https://www.amazon.com/s?k=alfapet+liners&ref=nb_sb_noss">Return to Amazon Store Page</a>
             </div>
         </section>
     </body>
+    <footer>
+        <p id = "alfapet">AlfaPet Inc. | 7319 Ingham Ln, Godfrey, IL 62035</p>
+    </footer>
 </html>
