@@ -1,14 +1,18 @@
+<!--HTML for Alfapet Liner Calculator
+Developed by Adam Johnes-->
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8">
-        <meta name = "viewport" content = "width = device-width">
+        <meta name = "viewport" content = "width = device-width, initial-scale=1.0">
         <meta name = "description" content = "Litter Box Dimensions Calculator">
         <meta name = "keywords" content = "Litter, box, dimensions, calculator, elastic, liner, cat">
         <meta name = "author" content = "Adam Johnes">
         <title>Cat Pan Liner Size Calculator | Welcome</title>
         <link rel = "stylesheet" href= "https://www.w3schools.com/w3css/4/w3.css"> 
         <link rel = "stylesheet" href= "style.css"> 
+        <script type = "text/javascript" src = "script.js"></script>
     </head>
     <body>
         <header>
@@ -24,20 +28,26 @@
                     <p id = "about">This calculator takes the dimensions of your litterbox and matches the size of your litterbox with the appropriate Alfapet sized liner. To do this, you must enter your litterbox's height, length and width in inches. Please use the pictures below for any questions you may have about properly measuring your litterbox.</p>
             </div>
             <div id = "main" class = "container">
-                <form id = "form" class = "form">
+                <form id = "form" action = "/" method = "GET">
                     <h1 id = "linerCalculator">Cat Pan Liner Calculator</h1>
-                    <label id = "labelWidth" for = "width">Width(in):</label><br>
-                    <input type = "text" id = "width" placeholder = "Enter width in INCHES"><br><br>
                     <label id = "labelLength" for = "length">Length(in):</label><br>
-                    <input type = "text" id = "length" placeholder = "Enter length in INCHES"><br><br>
-                    <label id = "labelDepth" for = "Depth">Depth(in):</label><br>
-                    <input type = "text" id = "depth" placeholder = "Enter depth in INCHES"><br><br>
-                    <input type = "submit" id = "submit" value = "Submit">
+                    <input type = "text" id = "length" placeholder = "Enter length in INCHES" required><br><br>
+                    <p id = "lengthError"></p>
+                    <label id = "labelWidth" for = "width">Width(in):</label><br>
+                    <input type = "text" id = "width" placeholder = "Enter width in INCHES" required><br><br>
+                    <p id = "widthError"></p>
+                    <label id = "labelHeight" for = "Height">Height(in):</label><br>
+                    <input type = "text" id = "height" placeholder = "Enter height in INCHES" required><br><br>
+                    <p id = "heightError"></p>
+                    <input type = "button" id = "myBtn" value = "Submit" onclick = "checkValues()"/>
                     <input type = "reset" id = "reset" value = "Reset">
+                    <div id = "outputBox" class = "container">
+                    <p id = "output"></p>
+                    </div>
                 </form>
-                <img src = "pineapple.jpg" alt = "pineapple" id = "pineapple">
+                <img src = "box.png" alt = "box" id = "box">
                     <p id = "L1info">To measure the dimensions of your litterbox, you must take the values of the length, width and height. </p>
-                <img src = "aruba.jpg" alt = "aruba" id = "aruba">
+                <img src = "box2.png" alt = "box2" id = "box2">
                     <p id = "L2info">In cases where your litterbox may not have equal heights on all sides, measure the side with the longest height, and use that measurement as your height value.</p>
                 <h1 id = "sizes">Alfapet Liner Sizes</h1>
                 <table id = "table">
@@ -63,6 +73,6 @@
         </section>
     </body>
     <footer>
-        <p id = "alfapet">AlfaPet Inc. | 7319 Ingham Ln, Godfrey, IL 62035</p>
+        <p id = "alfapet">AlfaPet Inc. | 7319 Ingham Ln, Godfrey, IL 62035 | Copyright &copy;  2021 Alfapet Inc.</p>
     </footer>
 </html>
