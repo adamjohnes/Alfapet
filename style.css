@@ -212,7 +212,7 @@ div {
   border: 1px solid black;
   width: 20%;
   float: left;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 90px;
   margin-right: 125px;
 }
@@ -227,7 +227,6 @@ td {
 
 #returnLink {
   position: absolute;
-  margin-bottom: -30px;
   left: 42.5%;
   bottom: -10%;
 }
