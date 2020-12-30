@@ -28,6 +28,7 @@ Developed by Adam Johnes-->
                 <img src =  "calculator.jpg" alt = "calculator" id = "calculator">
                     <p id = "about">This calculator takes the dimensions of your litterbox and matches the size of your litterbox with the appropriate Alfapet sized liner. To do this, you must enter your litterbox's height, length and width in inches. Please use the pictures below for any questions you may have about properly measuring your litterbox.</p>
             </div>
+        </section>
             <div id = "main" class = "container">
                 <form id = "form" action = "/" method = "GET">
                     <h1 id = "linerCalculator">Cat Pan Liner Calculator</h1>
@@ -43,35 +44,36 @@ Developed by Adam Johnes-->
                     <input type = "button" id = "myBtn" value = "Submit" onclick = "checkValues()"/>
                     <input type = "reset" id = "reset" value = "Reset">
                     <div id = "outputBox" class = "container">
-                    <p id = "output"></p>
+                        <p id = "output"></p>
                     </div>
                 </form>
                 <img src = "box.png" alt = "box" id = "box">
-                    <p id = "L1info">To measure the dimensions of your litterbox, you must take the values of the length, width and height. </p>
+                    <p id = "L1info">To measure the dimensions of your litterbox, you must identify the values of the length, width and height. </p>
                 <img src = "box2.png" alt = "box2" id = "box2">
                     <p id = "L2info">In cases where your litterbox may not have equal heights on all sides, measure the side with the longest height, and use that measurement as your height value.</p>
-                <h1 id = "sizes">Alfapet Liner Sizes</h1>
-                <table id = "table">
-                    <tr>
-                      <th>Size Names</th>
-                      <th>Dimensions</th>
-                    </tr>
-                    <tr>
-                      <td>ReqMed</td>
-                      <td>31x17</td>
-                    </tr>
-                    <tr>
-                      <td>XLJumbo</td>
-                      <td>37x18</td>
-                    </tr>
-                    <tr>
-                        <td>Super Jumbo</td>
-                        <td>40x22</td>
-                    </tr>
-                  </table>
-                  <a id = "returnLink" href="https://www.amazon.com/s?k=alfapet+liners&ref=nb_sb_noss">Return to Amazon Store Page</a>
             </div>
-        </section>
+            <div id = mainBottom class = "container">
+                <h1 id = "sizes">Alfapet Liner Sizes</h1>
+                    <table id = "table">
+                        <tr>
+                        <th>Size Names</th>
+                        <th>Dimensions</th>
+                        </tr>
+                        <tr>
+                        <td>Req Med</td>
+                        <td>31x17</td>
+                        </tr>
+                        <tr>
+                        <td>XL Jumbo</td>
+                        <td>37x18</td>
+                        </tr>
+                        <tr>
+                            <td>Super Jumbo</td>
+                            <td>40x22</td>
+                        </tr>
+                    </table>
+                <a id = "returnLink" href="https://www.amazon.com/s?k=alfapet+liners&ref=nb_sb_noss">Click this to return to Amazon Store Page</a>
+            </div>
     </body>
     <footer>
         <p id = "alfapet">AlfaPet Inc. | 7319 Ingham Ln, Godfrey, IL 62035 | Copyright &copy;  2021 Alfapet Inc.</p>

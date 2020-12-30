@@ -108,8 +108,10 @@ function checkValues(){
             document.getElementById("output").innerHTML = "The correct liner size is XL Jumbo.<br>Your dimensions: " + String(length) + "x" + String(width) + "x" + String(height);
         }else if (userLength <= 40 && userWidth <= 44){
             document.getElementById("output").innerHTML = "The correct liner size is Super Jumbo.<br>Your dimensions: " + String(length) + "x" + String(width) + "x" + String(height);
-        }else{     
-            document.getElementById("output").innerHTML = "One of your sides is too large for our liners."
+        }else if (userLength > 40 || userWidth > 44){     
+            document.getElementById("output").innerHTML = "Atleast one of your sides are too big for our liners. Sorry."
+        }else{
+            document.getElementById("output").innerHTML = "Please check your values and enter a number."
         }
     }
 }
