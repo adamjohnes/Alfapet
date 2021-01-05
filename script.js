@@ -103,11 +103,11 @@ function checkValues(){
         if (userLength < 24 || userWidth < 14){
             document.getElementById("output").innerHTML = "Too small of dimensions.";
         }else if (userLength <= 31 && userWidth <= 34){
-            document.getElementById("output").innerHTML = "The correct liner size is Req-Med.<br>Your dimensions: " + String(length) + "x" + String(width) + "x" + String(height);
+            document.getElementById("output").innerHTML = "The correct liner size is Medium/Large.";
         }else if (userLength <= 37 && userWidth <= 36){
-            document.getElementById("output").innerHTML = "The correct liner size is XL Jumbo.<br>Your dimensions: " + String(length) + "x" + String(width) + "x" + String(height);
+            document.getElementById("output").innerHTML = "The correct liner size is<br> XL Jumbo/Extra Giant.";
         }else if (userLength <= 40 && userWidth <= 44){
-            document.getElementById("output").innerHTML = "The correct liner size is Super Jumbo.<br>Your dimensions: " + String(length) + "x" + String(width) + "x" + String(height);
+            document.getElementById("output").innerHTML = "The correct liner size is Super Jumbo.";
         }else if (userLength > 40 || userWidth > 44){     
             document.getElementById("output").innerHTML = "Atleast one of your sides are too big for our liners. Sorry."
         }else{
