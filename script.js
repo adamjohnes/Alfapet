@@ -64,54 +64,99 @@ let XLJumbo = Liner(37, 18 * 2);
 let superJumbo = Liner(40, 22 * 2); */
 
 document.getElementById("myBtn").onclick = checkValues;
+document.getElementById("reset").onclick = resetValues;
 
 function checkValues(){
 
     length = +document.getElementById("length").value;
     width = +document.getElementById("width").value;
-    height = +document.getElementById("height").value;
-    
+    lengthFront = +document.getElementById("lengthFront").value;
+    widthFront = +document.getElementById("widthFront").value;
+    lengthBack = +document.getElementById("lengthBack").value;
+    widthBack = +document.getElementById("widthBack").value;
+    lengthError = document.getElementById("lengthError");
+    widthError = document.getElementById("widthError");
+    lengthFrontError = document.getElementById("lengthFrontError");
+    widthFrontError = document.getElementById("widthFrontError");
+    lengthBackError = document.getElementById("lengthBackError");
+    widthBackError = document.getElementById("widthBackError");
+    output = document.getElementById("output");
     buffer = 1;
 
-    if (length < 0 || width < 0 || height < 0){
+    if (length < 0 || isNaN(length) || width < 0 || isNaN(width) || lengthFront < 0 || isNaN(lengthFront) || widthFront < 0 || isNaN(widthFront) || lengthBack < 0 || isNaN(lengthBack) || widthBack < 0 || isNaN(widthBack)){
         if (length < 0 || isNaN(length)){
-            document.getElementById("lengthError").innerHTML = "Enter a positive number.";
-            document.getElementById("output").innerHTML = "";
-        }else{
-            document.getElementById("lengthError").innerHTML = "";
-        }
-        if (width < 0){
-            document.getElementById("widthError").innerHTML = "Enter a positive number.";
-            document.getElementById("output").innerHTML = "";
-        }else{
-            document.getElementById("widthError").innerHTML = "";
-        }
-        if (height < 0){
-            document.getElementById("heightError").innerHTML = "Enter a positive number.";
-            document.getElementById("output").innerHTML = "";
-        }else{
-            document.getElementById("heightError").innerHTML = ""; 
+            lengthError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (length == 0){
+            lengthError.innerHTML = "Must be larger than zero.";
+        } else{
+            lengthError.innerHTML = "";
+        } if (width < 0 || isNaN(width)){
+            widthError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (width == 0){
+            widthError.innerHTML = "Must be larger than zero.";
+        } else{
+            widthError.innerHTML = "";
+        } if (lengthFront < 0 || isNaN(lengthFront)){
+            lengthFrontError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (lengthFront == 0){
+            lengthFrontError.innerHTML = "Must be larger than zero.";
+        } else{
+            lengthFrontError.innerHTML = "";
+        } if (widthFront < 0 || isNaN(widthFront)){
+            widthFrontError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (widthFront == 0){
+            widthFrontError.innerHTML = "Must be larger than zero.";
+        } else{
+            widthFrontError.innerHTML = "";
+        } if (lengthBack < 0 || isNaN(lengthBack)){
+            lengthBackError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (lengthBack == 0){
+            lengthBackError.innerHTML = "Must be larger than zero.";
+        } else{
+            lengthBackError.innerHTML = "";
+        } if (widthBack < 0 || isNaN(widthBack)){
+            widthBackError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (widthBack == 0){
+            widthBackError.innerHTML = "Must be larger than zero.";
+        } else{
+            widthBackError.innerHTML = "";
         }
     }else{
-        document.getElementById("lengthError").innerHTML = "";
-        document.getElementById("widthError").innerHTML = "";
-        document.getElementById("heightError").innerHTML = "";
-
-        userLength = length + (height * 2) + buffer;
-        userWidth = width + (height * 2) + buffer;
-
-        if (userLength < 24 || userWidth < 14){
-            document.getElementById("output").innerHTML = "Too small of dimensions.";
-        }else if (userLength <= 31 && userWidth <= 34){
-            document.getElementById("output").innerHTML = "The correct liner size is Medium/Large.";
-        }else if (userLength <= 37 && userWidth <= 36){
-            document.getElementById("output").innerHTML = "The correct liner size is<br> XL Jumbo/Extra Giant.";
-        }else if (userLength <= 40 && userWidth <= 44){
-            document.getElementById("output").innerHTML = "The correct liner size is Super Jumbo.";
-        }else if (userLength > 40 || userWidth > 44){     
-            document.getElementById("output").innerHTML = "Atleast one of your sides are too big for our liners. Sorry."
-        }else{
-            document.getElementById("output").innerHTML = "Please check your values and enter a number."
+        x = length + lengthFront + lengthBack;
+        y = width + widthFront + widthBack;
+        if ((x <= 31 && y <= 34) && (length <= 20 && width <= 20 && lengthFront <= 8 && widthFront <= 8 && lengthBack <= 8 && widthBack <= 8)){
+            output.innerHTML = "191";
+            if (length == 0 || width == 0 || lengthFront == 0 || widthFront == 0 || lengthBack == 0 || widthBack == 0){
+                output.innerHTML = "";
+            }
+        } else if ((x <= 37 && y <= 36) && (length <= 24 && width <= 24 && lengthFront <= 10 && widthFront <= 10 && lengthBack <= 10 && widthBack <= 10)){
+            output.innerHTML = "192";
+        } else if ((x <= 42 && y <= 40.5) && (length <= 27 && width <= 26 && lengthFront <= 12 && widthFront <= 12 && lengthBack <= 12 && widthBack <= 12)){
+            output.innerHTML = "178";
+        } else{
+            output.innerHTML = "One of your measurements is too large for our liners."
         }
     }
+}
+
+function resetValues(){
+    document.getElementById("length").value = null;
+    document.getElementById("width").value = null;
+    document.getElementById("lengthFront").value = null;
+    document.getElementById("widthFront").value = null;
+    document.getElementById("lengthBack").value = null;
+    document.getElementById("widthBack").value = null;
+    document.getElementById("lengthError").value = null;
+    document.getElementById("widthError").value = null;
+    document.getElementById("lengthFrontError").value = null;
+    document.getElementById("widthFrontError").value = null;
+    document.getElementById("lengthBackError").value = null;
+    document.getElementById("widthBackError").value = null;
+    output = document.getElementById("output").innerHTML = "";
 }

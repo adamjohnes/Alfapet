@@ -33,17 +33,26 @@ Developed by Adam Johnes-->
             <div id = "main" class = "container">
                 <form id = "form" action = "/" method = "GET">
                     <h1 id = "linerCalculator">Cat Pan Liner Calculator</h1>
-                    <label id = "labelLength" for = "length">Length(in):</label><br>
-                    <input type = "text" id = "length" placeholder = "Enter length in INCHES" required><br><br>
+                    <label id = "labelLength" for = "length">Length(in)</label>
+                    <label id = "labelWidth" for = "width">Width(in)</label>
+                    <input type = "text" id = "length" required>
+                    <input type = "text" id = "width" required><br>
                     <p id = "lengthError"></p>
-                    <label id = "labelWidth" for = "width">Width(in):</label><br>
-                    <input type = "text" id = "width" placeholder = "Enter width in INCHES" required><br><br>
                     <p id = "widthError"></p>
-                    <label id = "labelHeight" for = "Height">Height(in):</label><br>
-                    <input type = "text" id = "height" placeholder = "Enter height in INCHES" required><br><br>
-                    <p id = "heightError"></p>
+                    <label id = "labelLengthFront" for = "lengthFront">Front(in)</label>
+                    <label id = "labelWidthFront" for = "widthFront">Left(in)</label>
+                    <input type = "text" id = "lengthFront" required>
+                    <input type = "text" id = "widthFront" required><br>
+                    <p id = "lengthFrontError"></p>
+                    <p id = "widthFrontError"></p>
+                    <label id = "labelLengthBack" for = "lengthBack">Back(in)</label>
+                    <label id = "labelWidthBack" for = "widthBack">Right(in)</label>
+                    <input type = "text" id = "lengthBack" required>
+                    <input type = "text" id = "widthBack" required><br>
+                    <p id = "lengthBackError"></p>
+                    <p id = "widthBackError"></p>
                     <input type = "button" id = "myBtn" value = "Submit" onclick = "checkValues()"/>
-                    <input type = "reset" id = "reset" value = "Reset">
+                    <input type = "button" id = "reset" value = "Reset" onclick = "resetValues()"/>
                     <div id = "outputBox" class = "container">
                         <p id = "output"></p>
                     </div>
