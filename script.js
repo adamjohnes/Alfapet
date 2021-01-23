@@ -8,20 +8,29 @@ function checkValues(){
 
     length = +document.getElementById("length").value;
     width = +document.getElementById("width").value;
-    lengthFront = +document.getElementById("lengthFront").value;
-    widthFront = +document.getElementById("widthFront").value;
-    lengthBack = +document.getElementById("lengthBack").value;
-    widthBack = +document.getElementById("widthBack").value;
+    front = +document.getElementById("front").value;
+    left = +document.getElementById("left").value;
+    back = +document.getElementById("back").value;
+    right = +document.getElementById("right").value;
     lengthError = document.getElementById("lengthError");
     widthError = document.getElementById("widthError");
-    lengthFrontError = document.getElementById("lengthFrontError");
-    widthFrontError = document.getElementById("widthFrontError");
-    lengthBackError = document.getElementById("lengthBackError");
-    widthBackError = document.getElementById("widthBackError");
+    frontError = document.getElementById("frontError");
+    leftError = document.getElementById("leftError");
+    backError = document.getElementById("backError");
+    rightError = document.getElementById("rightError");
     output = document.getElementById("output");
+    large = document.getElementById("large");
+    largeLink = document.getElementById("largeLink");
+    largeText = document.getElementById("largeText");
+    extraGiant = document.getElementById("extraGiant");
+    extraGiantLink = document.getElementById("extraGiantLink");
+    extraGiantText = document.getElementById("extraGiantText");
+    superJumbo = document.getElementById("superJumbo");
+    superJumboLink = document.getElementById("superJumboLink");
+    superJumboText = document.getElementById("superJumboText");
     buffer = 1;
 
-    if (length < 0 || length == 0 || isNaN(length) || width < 0 || width == 0 || isNaN(width) || lengthFront < 0 || lengthFront == 0 || isNaN(lengthFront) || widthFront < 0 || widthFront == 0 || isNaN(widthFront) || lengthBack < 0 || lengthBack == 0 || isNaN(lengthBack) || widthBack < 0 || widthBack == 0 || isNaN(widthBack)){
+    if (length < 0 || length == 0 || isNaN(length) || width < 0 || width == 0 || isNaN(width) || front < 0 || front == 0 || isNaN(front) || left < 0 || left == 0 || isNaN(left) || back < 0 || back == 0 || isNaN(back) || right < 0 || right == 0 || isNaN(right)){
         if (length < 0 || isNaN(length)){
             lengthError.innerHTML = "Enter a positive number.";
             output.innerHTML = "";
@@ -38,72 +47,105 @@ function checkValues(){
             output.innerHTML = "";
         } else{
             widthError.innerHTML = "";
-        } if (lengthFront < 0 || isNaN(lengthFront)){
-            lengthFrontError.innerHTML = "Enter a positive number.";
+        } if (front < 0 || isNaN(front)){
+            frontError.innerHTML = "Enter a positive number.";
             output.innerHTML = "";
-        } else if (lengthFront == 0){
-            lengthFrontError.innerHTML = "Must be larger than zero.";
-            output.innerHTML = "";
-        } else{
-            lengthFrontError.innerHTML = "";
-        } if (widthFront < 0 || isNaN(widthFront)){
-            widthFrontError.innerHTML = "Enter a positive number.";
-            output.innerHTML = "";
-        } else if (widthFront == 0){
-            widthFrontError.innerHTML = "Must be larger than zero.";
+        } else if (front == 0){
+            frontError.innerHTML = "Must be larger than zero.";
             output.innerHTML = "";
         } else{
-            widthFrontError.innerHTML = "";
-        } if (lengthBack < 0 || isNaN(lengthBack)){
-            lengthBackError.innerHTML = "Enter a positive number.";
+            frontError.innerHTML = "";
+        } if (left < 0 || isNaN(left)){
+            leftError.innerHTML = "Enter a positive number.";
             output.innerHTML = "";
-        } else if (lengthBack == 0){
-            lengthBackError.innerHTML = "Must be larger than zero.";
-            output.innerHTML = "";
-        } else{
-            lengthBackError.innerHTML = "";
-        } if (widthBack < 0 || isNaN(widthBack)){
-            widthBackError.innerHTML = "Enter a positive number.";
-            output.innerHTML = "";
-        } else if (widthBack == 0){
-            widthBackError.innerHTML = "Must be larger than zero.";
+        } else if (left == 0){
+            leftError.innerHTML = "Must be larger than zero.";
             output.innerHTML = "";
         } else{
-            widthBackError.innerHTML = "";
+            leftError.innerHTML = "";
+        } if (back < 0 || isNaN(back)){
+            backError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (back == 0){
+            backError.innerHTML = "Must be larger than zero.";
+            output.innerHTML = "";
+        } else{
+            backError.innerHTML = "";
+        } if (right < 0 || isNaN(right)){
+            rightError.innerHTML = "Enter a positive number.";
+            output.innerHTML = "";
+        } else if (right == 0){
+            rightError.innerHTML = "Must be larger than zero.";
+            output.innerHTML = "";
+        } else{
+            rightError.innerHTML = "";
         }
     }else{
-        document.getElementById("lengthError").innerHTML = "";
-        document.getElementById("widthError").innerHTML = "";
-        document.getElementById("lengthFrontError").innerHTML = "";
-        document.getElementById("widthFrontError").innerHTML = "";
-        document.getElementById("lengthBackError").innerHTML = "";
-        document.getElementById("widthBackError").innerHTML = "";
-        x = length + lengthFront + lengthBack;
-        y = width + widthFront + widthBack;
-        if ((x <= 31 && y <= 34) && (length <= 20 && width <= 20 && lengthFront <= 8 && widthFront <= 8 && lengthBack <= 8 && widthBack <= 8)){
+        lengthError.innerHTML = "";
+        widthError.innerHTML = "";
+        frontError.innerHTML = "";
+        leftError.innerHTML = "";
+        backError.innerHTML = "";
+        rightError.innerHTML = "";
+        x = length + front + back;
+        y = width + left + right;
+        if ((x <= 31 && y <= 34) && (length <= 20 && width <= 20 && front <= 8 && left <= 8 && back <= 8 && right <= 8)){
             output.innerHTML = "The correct size is Large.<br> Click on the picture below to be taken to our Amazon store page!";
+            extraGiant.style.visibility='hidden';
+            extraGiantText.style.visibility='hidden';
+            superJumbo.style.visibility='hidden';
+            superJumboText.style.visibility='hidden';
+            large.style.visibility='visible';
+            largeText.style.visibility='visible';
+            largeLink.href = "https://www.amazon.com/Alfapet-Disposable-12-count-Technology-Cleaners/dp/B084G86231/ref=sr_1_20?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609794179&sr=8-20";
+            extraGiantLink.removeAttribute("href");
+            superJumboLink.removeAttribute("href");
             output.style.color = "purple";
-            if (length == 0 || width == 0 || lengthFront == 0 || widthFront == 0 || lengthBack == 0 || widthBack == 0){
+            if (length == 0 || width == 0 || front == 0 || left == 0 || back == 0 || right == 0){
                 output.innerHTML = "";
             }
-        } else if ((x <= 37 && y <= 36) && (length <= 24 && width <= 24 && lengthFront <= 10 && widthFront <= 10 && lengthBack <= 10 && widthBack <= 10)){
+        } else if ((x <= 37 && y <= 36) && (length <= 24 && width <= 24 && front <= 10 && left <= 10 && back <= 10 && right <= 10)){
             output.innerHTML = "The correct size is Extra Giant.<br> Click on the picture below to be taken to our Amazon store page!";
+            large.style.visibility='hidden';
+            largeText.style.visibility='hidden';
+            superJumbo.style.visibility='hidden';
+            superJumboText.style.visibility='hidden';
+            extraGiant.style.visibility='visible';
+            extraGiantText.style.visibility='visible';
+            extraGiantLink.href = "https://www.amazon.com/Alfapet-Extra-giant-Elastic-Sta-put-Litter/dp/B016095M6G/ref=sr_1_15?dchild=1&keywords=cat+pan+liners+alfapet&qid=1610991048&sr=8-15";
+            superJumboLink.removeAttribute("href");
+            largeLink.removeAttribute("href");
             output.style.color = "rgb(94, 19, 31)";
-        } else if ((x <= 42 && y <= 40.5) && (length <= 27 && width <= 26 && lengthFront <= 12 && widthFront <= 12 && lengthBack <= 12 && widthBack <= 12)){
+        } else if ((x <= 42 && y <= 40.5) && (length <= 27 && width <= 26 && front <= 12 && left <= 12 && back <= 12 && right <= 12)){
             output.innerHTML = "The correct size is Super Jumbo.<br> Click on the picture below to be taken to our Amazon store page!";
+            large.style.visibility='hidden';
+            largeText.style.visibility='hidden';
+            extraGiant.style.visibility='hidden';
+            extraGiantText.style.visibility='hidden';
+            superJumbo.style.visibility='visible';
+            superJumboText.style.visibility='visible';
+            superJumboLink.href = "https://www.amazon.com/Alfapet-Disposable-Liners-5-Pack-Extra-Giant-Super-Jumbo/dp/B0898MMYXJ/ref=sr_1_18?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609792159&sr=8-18"
+            extraGiantLink.removeAttribute("href");
+            largeLink.removeAttribute("href");
             output.style.color = "darkgreen";
         } else if (length > 27){
             output.innerHTML = "Your length is too large for any for our liners."
+            output.style.color = "black";
         } else if (width > 26){
             output.innerHTML = "Your width is too large for any for our liners."
-        } else if (lengthFront > 12){
+            output.style.color = "black";
+        } else if (front > 12){
             output.innerHTML = "Your front side is too large for any for our liners."
-        } else if (widthFront > 12){
+            output.style.color = "black";
+        } else if (left > 12){
             output.innerHTML = "Your left side is too large for any for our liners."
-        } else if (lengthBack > 12){
+            output.style.color = "black";
+        } else if (back > 12){
             output.innerHTML = "Your back side is too large for any for our liners."
-        } else if (widthBack > 12){
+            output.style.color = "black";
+        } else if (right > 12){
             output.innerHTML = "Your right side is too large for any for our liners."
+            output.style.color = "black";
         }
     }
 }
@@ -111,15 +153,25 @@ function checkValues(){
 function resetValues(){
     document.getElementById("length").value = null;
     document.getElementById("width").value = null;
-    document.getElementById("lengthFront").value = null;
-    document.getElementById("widthFront").value = null;
-    document.getElementById("lengthBack").value = null;
-    document.getElementById("widthBack").value = null;
+    document.getElementById("front").value = null;
+    document.getElementById("left").value = null;
+    document.getElementById("back").value = null;
+    document.getElementById("right").value = null;
     document.getElementById("lengthError").innerHTML = "";
     document.getElementById("widthError").innerHTML = "";
-    document.getElementById("lengthFrontError").innerHTML = "";
-    document.getElementById("widthFrontError").innerHTML = "";
-    document.getElementById("lengthBackError").innerHTML = "";
-    document.getElementById("widthBackError").innerHTML = "";
+    document.getElementById("frontError").innerHTML = "";
+    document.getElementById("leftError").innerHTML = "";
+    document.getElementById("backError").innerHTML = "";
+    document.getElementById("rightError").innerHTML = "";
     output = document.getElementById("output").innerHTML = "";
+
+    large.style.visibility='visible';
+    largeText.style.visibility='visible';
+    extraGiant.style.visibility='visible';
+    extraGiantText.style.visibility='visible';
+    superJumbo.style.visibility='visible';
+    superJumboText.style.visibility='visible';
+    superJumboLink.href = "https://www.amazon.com/Alfapet-Disposable-Liners-5-Pack-Extra-Giant-Super-Jumbo/dp/B0898MMYXJ/ref=sr_1_18?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609792159&sr=8-18"
+    extraGiantLink.href = "https://www.amazon.com/Alfapet-Extra-giant-Elastic-Sta-put-Litter/dp/B016095M6G/ref=sr_1_15?dchild=1&keywords=cat+pan+liners+alfapet&qid=1610991048&sr=8-15";
+    largeLink.href = "https://www.amazon.com/Alfapet-Disposable-12-count-Technology-Cleaners/dp/B084G86231/ref=sr_1_20?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609794179&sr=8-20";
 }

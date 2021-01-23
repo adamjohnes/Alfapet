@@ -140,19 +140,19 @@ div {
   text-align: center;
 }
 
-#labelLengthFront{
+#labelFront{
   margin-left: 50px;
   font-size: 13px;
   font-weight: bold;
 }
 
-#lengthFront{
+#front{
   width: 60px;
   text-align: center;
   margin-left: 52px;
 }
 
-#lengthFrontError{
+#frontError{
   color: darkred;
   font-size: 10px;
   height: 10px;
@@ -162,19 +162,19 @@ div {
   margin-left: 5px;
 }
 
-#labelWidthFront{
-  margin-left: 55px;
+#labelLeft{
+  margin-left: 45px;
   font-size: 13px;
   font-weight: bold;
 }
 
-#widthFront{
+#left{
   width: 60px;
   text-align: center;
   margin-left: 60px;
 }
 
-#widthFrontError{
+#leftError{
   color: darkred;
   font-size: 10px;
   height: 10px;
@@ -183,19 +183,19 @@ div {
   margin-left: 110px;
 }
 
-#labelLengthBack{
+#labelBack{
   margin-left: 51px;
   font-size: 13px;
   font-weight: bold;
 }
 
-#lengthBack{
+#back{
   width: 60px;
   text-align: center;
   margin-left: 52px;
 }
 
-#lengthBackError{
+#backError{
   color: darkred;
   font-size: 10px;
   height: 10px;
@@ -205,19 +205,19 @@ div {
   margin-left: 5px;
 }
 
-#labelWidthBack{
-  margin-left: 58px;
+#labelRight{
+  margin-left: 48px;
   font-size: 13px;
   font-weight: bold;
 }
 
-#widthBack{
+#right{
   width: 60px;
   text-align: center;
   margin-left: 60px;
 }
 
-#widthBackError{
+#rightError{
   color: darkred;
   font-size: 10px;
   height: 10px;
@@ -267,7 +267,7 @@ div {
   padding: 5px;
   float: right;
   margin-right: 13px;
-  margin-top: 90px;
+  margin-top: 40px;
   background-color: white;
   border: 1px solid rgb(13, 13, 14);
   text-align: center;
@@ -371,31 +371,6 @@ div {
   margin-left: 645px;
   margin-top: -25%;
 }
-
-#contact{
-  width: 105px;
-  border: 2px solid black;
-  background-color: white;
-  text-decoration: underline;
-  text-align: center;
-}
-
-#table {
-  border: 2px solid black;
-  padding: 5px;
-  width: 30%;
-  float: left;
-  margin-top: 50px;
-  margin-left: -330px;
-  background-color: rgb(214, 211, 230);
-}
-
-td {
-  text-align: center;
-  border: 1px solid black;
-  background-color: rgb(226, 231, 236);
-}
-
 
 #copyright {
   text-align: center;
