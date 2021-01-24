@@ -229,8 +229,6 @@ div {
 #myBtn {
   margin-top: 5px;
   margin-left: 70px;
-  height: 30px;
-  width: 70px;
 }
 
 #outputBox {
@@ -245,8 +243,9 @@ div {
   margin-top: 3px;
   width: 265px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+  font-family: Bookman, Arial;
 }
 
 #reset {
@@ -272,6 +271,7 @@ div {
   border: 1px solid rgb(13, 13, 14);
   text-align: center;
   font-weight: bold;
+  font-family: Tahoma, Arial;
 }
 
 #box2 {
@@ -294,6 +294,7 @@ div {
   border: 1px solid rgb(13, 13, 14);
   text-align: center;
   font-weight: bold;
+  font-family: Tahoma, Arial;
 }
 
 #mainBottom {
@@ -382,13 +383,14 @@ div {
 
 #clickCat{
   width: 265px;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid black;
-  margin-left: 615px;
+  margin-left: 620px;
   margin-top: -5%;
   background-color: white;
   font-weight: bold;
+  font-family: Bookman;
 }
 
 #copyright {

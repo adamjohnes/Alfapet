@@ -28,7 +28,6 @@ function checkValues(){
     superJumbo = document.getElementById("superJumbo");
     superJumboLink = document.getElementById("superJumboLink");
     superJumboText = document.getElementById("superJumboText");
-    buffer = 1;
 
     if (length < 0 || length == 0 || isNaN(length) || width < 0 || width == 0 || isNaN(width) || front < 0 || front == 0 || isNaN(front) || left < 0 || left == 0 || isNaN(left) || back < 0 || back == 0 || isNaN(back) || right < 0 || right == 0 || isNaN(right)){
         if (length < 0 || isNaN(length)){
@@ -89,7 +88,10 @@ function checkValues(){
         rightError.innerHTML = "";
         x = length + front + back;
         y = width + left + right;
-        if ((x <= 31 && y <= 34) && (length <= 20 && width <= 20 && front <= 8 && left <= 8 && back <= 8 && right <= 8)){
+        if (length < 6 || width < 6 || front < 2 || left < 2 || right < 2 || back < 2){
+            output.innerHTML = "Atleast one of your sides are too small for our liners."
+            output.style.color = "black";
+        }   else if ((x <= 31 && y <= 34) && (length <= 20 && width <= 20 && front <= 8 && left <= 8 && back <= 8 && right <= 8)){
             output.innerHTML = "The correct size is Large.<br> Click on the picture below to be taken to our Amazon store page!";
             extraGiant.style.visibility='hidden';
             extraGiantText.style.visibility='hidden';
