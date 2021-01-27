@@ -25,6 +25,15 @@ function checkValues(){
     extraGiant = document.getElementById("extraGiant");
     extraGiantLink = document.getElementById("extraGiantLink");
     extraGiantText = document.getElementById("extraGiantText");
+    flatBottom = document.getElementById("flatBottom");
+    flatBottomLink = document.getElementById("flatBottomLink");
+    flatBottomText = document.getElementById("flatBottomText");
+    jumbo = document.getElementById("jumbo");
+    jumboLink = document.getElementById("jumboLink");
+    jumboText = document.getElementById("jumboText");
+    sifting = document.getElementById("sifting");
+    siftingLink = document.getElementById("siftingLink");
+    siftingText = document.getElementById("siftingText");
     superJumbo = document.getElementById("superJumbo");
     superJumboLink = document.getElementById("superJumboLink");
     superJumboText = document.getElementById("superJumboText");
@@ -91,44 +100,17 @@ function checkValues(){
         if (length < 6 || width < 6 || front < 2 || left < 2 || right < 2 || back < 2){
             output.innerHTML = "Atleast one of your sides are too small for our liners."
             output.style.color = "black";
-        }   else if ((x <= 31 && y <= 34) && (length <= 20 && width <= 20 && front <= 8 && left <= 8 && back <= 8 && right <= 8)){
-            output.innerHTML = "The correct size is Large.<br> Click on the picture below to be taken to our Amazon store page!";
-            extraGiant.style.visibility='hidden';
-            extraGiantText.style.visibility='hidden';
-            superJumbo.style.visibility='hidden';
-            superJumboText.style.visibility='hidden';
-            large.style.visibility='visible';
-            largeText.style.visibility='visible';
-            largeLink.href = "https://www.amazon.com/Alfapet-Disposable-12-count-Technology-Cleaners/dp/B084G86231/ref=sr_1_20?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609794179&sr=8-20";
-            extraGiantLink.removeAttribute("href");
-            superJumboLink.removeAttribute("href");
-            output.style.color = "purple";
+        }   else if (x <= 31 && y <= 34){
+            output.innerHTML = "The correct size is Large.<br> Click on the pictures below to be taken to our Amazon store page!";
+            output.style.color = "rgb(95, 63, 63)";
             if (length == 0 || width == 0 || front == 0 || left == 0 || back == 0 || right == 0){
                 output.innerHTML = "";
             }
-        } else if ((x <= 37 && y <= 36) && (length <= 24 && width <= 24 && front <= 10 && left <= 10 && back <= 10 && right <= 10)){
-            output.innerHTML = "The correct size is Extra Giant.<br> Click on the picture below to be taken to our Amazon store page!";
-            large.style.visibility='hidden';
-            largeText.style.visibility='hidden';
-            superJumbo.style.visibility='hidden';
-            superJumboText.style.visibility='hidden';
-            extraGiant.style.visibility='visible';
-            extraGiantText.style.visibility='visible';
-            extraGiantLink.href = "https://www.amazon.com/Alfapet-Extra-giant-Elastic-Sta-put-Litter/dp/B016095M6G/ref=sr_1_15?dchild=1&keywords=cat+pan+liners+alfapet&qid=1610991048&sr=8-15";
-            superJumboLink.removeAttribute("href");
-            largeLink.removeAttribute("href");
-            output.style.color = "rgb(94, 19, 31)";
-        } else if ((x <= 42 && y <= 40.5) && (length <= 27 && width <= 26 && front <= 12 && left <= 12 && back <= 12 && right <= 12)){
-            output.innerHTML = "The correct size is Super Jumbo.<br> Click on the picture below to be taken to our Amazon store page!";
-            large.style.visibility='hidden';
-            largeText.style.visibility='hidden';
-            extraGiant.style.visibility='hidden';
-            extraGiantText.style.visibility='hidden';
-            superJumbo.style.visibility='visible';
-            superJumboText.style.visibility='visible';
-            superJumboLink.href = "https://www.amazon.com/Alfapet-Disposable-Liners-5-Pack-Extra-Giant-Super-Jumbo/dp/B0898MMYXJ/ref=sr_1_18?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609792159&sr=8-18"
-            extraGiantLink.removeAttribute("href");
-            largeLink.removeAttribute("href");
+        } else if (x <= 37 && y <= 36){
+            output.innerHTML = "The correct size is<br> Extra Giant or Jumbo.<br>Click on the pictures below to be taken to our Amazon store page!";
+            output.style.color =  "rgb(21, 39, 56)";
+        } else if (x <= 42 && y <= 40.5){
+            output.innerHTML = "The correct size is Super Jumbo.<br> Click on the pictures below to be taken to our Amazon store page!";
             output.style.color = "darkgreen";
         } else if (length > 27){
             output.innerHTML = "Your length is too large for any for our liners."
@@ -166,14 +148,4 @@ function resetValues(){
     document.getElementById("backError").innerHTML = "";
     document.getElementById("rightError").innerHTML = "";
     output = document.getElementById("output").innerHTML = "";
-
-    large.style.visibility='visible';
-    largeText.style.visibility='visible';
-    extraGiant.style.visibility='visible';
-    extraGiantText.style.visibility='visible';
-    superJumbo.style.visibility='visible';
-    superJumboText.style.visibility='visible';
-    superJumboLink.href = "https://www.amazon.com/Alfapet-Disposable-Liners-5-Pack-Extra-Giant-Super-Jumbo/dp/B0898MMYXJ/ref=sr_1_18?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609792159&sr=8-18"
-    extraGiantLink.href = "https://www.amazon.com/Alfapet-Extra-giant-Elastic-Sta-put-Litter/dp/B016095M6G/ref=sr_1_15?dchild=1&keywords=cat+pan+liners+alfapet&qid=1610991048&sr=8-15";
-    largeLink.href = "https://www.amazon.com/Alfapet-Disposable-12-count-Technology-Cleaners/dp/B084G86231/ref=sr_1_20?dchild=1&keywords=alfapet+cat+pan+liners&qid=1609794179&sr=8-20";
 }
