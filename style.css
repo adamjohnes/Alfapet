@@ -13,12 +13,12 @@ div {
 #titleBox {
   height: 100px;
   background-color: rgb(198, 208, 216);
-  border: 2px solid rgb(11, 26, 41);
+  border: 2px solid black;
 }
 
 #title {
+  font-size: 42px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: rgb(0, 0, 0);
   margin-left: 20px;
   margin-bottom: -10px;
 }
@@ -62,7 +62,6 @@ div {
   width: 625px;
   margin-left: 27.5%;
   background-color: white;
-  border: 2px solid lightslategray;
   padding: 4px;
   font-size: 13px;
 }
@@ -267,7 +266,6 @@ div {
   margin-top: -205px;
   padding: 5px;
   background-color: white;
-  border: 1px solid rgb(13, 13, 14);
   text-align: center;
   font-family: Brickman, Arial;
 }
@@ -287,7 +285,6 @@ div {
   margin-top: -122px;
   padding: 5px;
   background-color: white;
-  border: 1px solid rgb(13, 13, 14);
   text-align: center;
   font-family: Brickman, Arial;
 }
