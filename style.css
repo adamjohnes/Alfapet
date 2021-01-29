@@ -26,14 +26,14 @@ div {
 #alfapet {
   width: 200px;
   height: 80px;
-  float: right;
-  margin-right: 30px;
+  margin-left: 750px;
 }
 
 #infotitle {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 16px;
   margin-left: 20px;
+  margin-top: -70px;
 }
 
 #main {
@@ -255,47 +255,62 @@ div {
 
 #box {
   border: 2px solid black;
-  width: 330px;
-  height: 190px;
-  float: left;
+  width: 260px;
+  height: 220px;
   margin-left: 20px;
   margin-top: 25px;
 }
 
 #L1info {
-  width: 280px;
+  width: 200px;
+  margin-left: 630px;
+  margin-top: -205px;
   padding: 5px;
-  float: right;
-  margin-right: 13px;
-  margin-top: 40px;
   background-color: white;
   border: 1px solid rgb(13, 13, 14);
   text-align: center;
-  font-weight: bold;
-  font-family: Tahoma, Arial;
+  font-family: Brickman, Arial;
 }
 
 #box2 {
   border: 2px solid black;
-  float: left;
-  width: 330px;
-  height: 190px;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-left: 20px;
+  width: 170px;
+  height: 170px;
   padding: 2px;
 }
 
 #L2info {
-  width: 280px;
+  width: 140px;
+  margin-left: 545px;
+  margin-top: -122px;
   padding: 5px;
-  float: right;
-  margin-right: 13px;
-  margin-top: 35px;
   background-color: white;
   border: 1px solid rgb(13, 13, 14);
   text-align: center;
-  font-weight: bold;
-  font-family: Tahoma, Arial;
+  font-family: Brickman, Arial;
+}
+
+#coolcat{
+  width: 60px;
+  height: 60px;
+  margin-left: 570px;
+  margin-top: -360px;
+}
+
+#videoBanner{
+  height: 180px;
+  width: 280px;
+  margin-left: 700px;
+  margin-top: -317px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+#videoBannerLink{
+  text-decoration: none;
 }
 
 #mainBottom {
@@ -303,7 +318,7 @@ div {
   border-left: 2px solid black;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
-  height: 240px;
+  height: 225px;
   background-color: rgb(235, 242, 252);
   margin-top: -15px;
 }

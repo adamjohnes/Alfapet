@@ -29,7 +29,7 @@ Developed by Adam Johnes-->
             <div id = "description" class = "container">
                 <h1 id = "aboutTitle">About This Calculator</h1>
                 <img src =  "calculator.jpg" alt = "calculator" id = "calculator">
-                <p id = "about">This calculator takes the dimensions of your litterbox and matches the size of your litterbox with the appropriate Alfapet sized liner.<br> To do this, you must enter your litterbox's length, width, and heights in inches. Please use the pictures below for any questions you may have about properly measuring your litterbox.</p>
+                <p id = "about">This calculator takes the dimensions of your litterbox and matches the size of your litterbox with the appropriate Alfapet sized liner. To do this, you must enter your litterbox's <b>length</b>, <b>width</b>, and <b>heights</b> in inches. Please use the pictures below for any questions you may have about properly measuring your litterbox.</p>
             </div>
         </section>
             <div id = "main" class = "container">
@@ -37,20 +37,20 @@ Developed by Adam Johnes-->
                     <h1 id = "linerCalculator">Cat Pan Liner Calculator</h1>
                     <label id = "labelLength" for = "length">Length(in)</label>
                     <label id = "labelWidth" for = "width">Width(in)</label>
-                    <input type = "text" id = "length" required>
-                    <input type = "text" id = "width" required><br>
+                    <input type = "text" placeholder = "Length" id = "length" required>
+                    <input type = "text" placeholder = "Width" id = "width" required><br>
                     <p id = "lengthError"></p>
                     <p id = "widthError"></p>
                     <label id = "labelFront" for = "front">Front(in)</label>
                     <label id = "labelLeft" for = "left">Left Side(in)</label>
-                    <input type = "text" id = "front" required>
-                    <input type = "text" id = "left" required><br>
+                    <input type = "text" placeholder = "Height" id = "front" required>
+                    <input type = "text" placeholder = "Height" id = "left" required><br>
                     <p id = "frontError"></p>
                     <p id = "leftError"></p>
                     <label id = "labelBack" for = "back">Back(in)</label>
                     <label id = "labelRight" for = "right">Right Side(in)</label>
-                    <input type = "text" id = "back" required>
-                    <input type = "text" id = "right" required><br>
+                    <input type = "text" placeholder = "Height" id = "back" required>
+                    <input type = "text" placeholder = "Height" id = "right" required><br>
                     <p id = "backError"></p>
                     <p id = "rightError"></p>
                     <input type = "button" id = "myBtn" value = "Submit" onclick = "checkValues()"/>
@@ -59,10 +59,14 @@ Developed by Adam Johnes-->
                         <p id = "output"></p>
                     </div>
                 </form>
-                <img src = "box.png" alt = "box" id = "box">
-                    <p id = "L1info">To measure the dimensions of your litterbox, you must identify the values of the length and width. You also need to identify your height values of the left, right, front and back sides of the box. </p>
-                <img src = "box2.png" alt = "box2" id = "box2">
-                    <p id = "L2info">If you have a lid on top of the litterbox, do NOT include it in the measurements.</p>
+                <img src = "box.jpg" alt = "box" id = "box">
+                    <p id = "L1info">To measure the dimensions of your litterbox, you must identify the values of the <b>length</b>, <b>width</b>, <b>front</b>, <b>back</b>, <b>left</b>, and <b>right</b> sides. The front, back, left and right sides are <b>HEIGHT</b> values. </p>
+                <img src = "box2.jpg" alt = "box2" id = "box2">
+                    <p id = "L2info">If you have a lid on top of the litterbox, do <b>NOT</b> include it in the measurements.</p>
+                <img src = "coolcat.png" alt = "coolcat" id = "coolcat">
+                <a id = "videoBannerLink" href = https://youtu.be/5WdmpOk6kiI>
+                    <img src = "videoBanner.jpg" alt = "videoBanner" id = "videoBanner">
+                </a>
             </div>
             <div id = mainBottom class = "container">
                 <h1 id = "products"></h1>
