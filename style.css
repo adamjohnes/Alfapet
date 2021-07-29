@@ -366,8 +366,8 @@ div {
   color: rgb(226, 76, 101);
   font-size: 12px;
   font-weight: bold;
-  margin-left: 171px;
-  margin-top: -35px;
+  margin-left: 336px;
+  margin-top: -30px;
   text-align: center;
 }
 
@@ -389,9 +389,9 @@ div {
   width: 183px;
   color: rgb(104, 44, 101);
   font-size: 12px;
-  font-weight: bold;
-  margin-left: 320px;
+  margin-left: 488px;
   margin-top: -30px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -414,7 +414,7 @@ div {
   color: rgb(43, 41, 155);
   font-size: 12px;
   font-weight: bold;
-  margin-left: 488px;
+  margin-left: 654px;
   margin-top: -30px;
   text-align: center;
 }
@@ -437,9 +437,9 @@ div {
   width: 183px;
   color: rgb(21, 39, 56);
   font-size: 12px;
-  font-weight: bold;
-  margin-left: 654px;
+  margin-left: 821px;
   margin-top: -30px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -461,9 +461,9 @@ div {
   font-size: 13px;
   width: 180px;
   color: darkgreen;
+  margin-left: 157px;
+  margin-top: -35px;
   font-weight: bold;
-  margin-left: 821px;
-  margin-top: -30px;
   text-align: center;
 }
 
